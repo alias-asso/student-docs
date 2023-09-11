@@ -1,0 +1,9 @@
+[book]
+authors = ["Alias"]
+language = "fr"
+multilingual = false
+src = "src"
+title = "Documentation Alias"
+
+[output.html]
+no-section-label = true
