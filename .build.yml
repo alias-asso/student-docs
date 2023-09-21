@@ -13,6 +13,6 @@ tasks:
   - deploy: |
       cd student-docs
       sshopts="ssh -o StrictHostKeyChecking=no"
-      rsync -rsh="$sshopts" -avh --delete book/ $deploy:/var/www/docs.alias-asso.fr/
+      rsync --rsh="$sshopts" -avh --delete book/ $deploy:/var/www/docs.alias-asso.fr/
 
   
