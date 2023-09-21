@@ -1,0 +1,18 @@
+image: alpine/edge
+packages:
+  - mdbook
+  - rsync
+secrets:
+  - 377b1655-4b5b-43a9-8cee-e48808fd7e55
+environment:
+  deploy: build@alias-asso.fr
+tasks:
+  - build: |
+      cd student-docs
+      mdbook build
+  - deploy: |
+      cd student-docs
+      sshopts="ssh -o StrictHostKeyChecking=no"
+      rsync -rsh="$sshopts" -avh --delete book/ $deploy:/var/www/docs.alias-asso.fr/
+
+  
