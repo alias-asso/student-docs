@@ -5,11 +5,11 @@
 
 ⚠️ **Prérequis**: 
 1. Ce tutoriel est dédié aux utilisateurs de machines ayant un fonctionnement basé sur UNIX dont MacOS, Linux ou Windows avec WSL. 
-Pour les utilisateurs Windows n'ayant pas WSL, [apprenez comment l'installer ici](env_c#le-wsl-pour-windows)  
+Pour les utilisateurs Windows n'ayant pas WSL, [apprenez comment l'installer ici](env_c.md#le-wsl-pour-windows)  
 
-2. Nous admetterons qu'un environnement de programmation C a été configuré sur votre machine. Si ce n'est pas le cas, [apprenez comment le faire facilement sur cet article](env_c).
+2. Nous admetterons qu'un environnement de programmation C a été configuré sur votre machine. Si ce n'est pas le cas, [apprenez comment le faire facilement sur cet article](env_c.md).
    
-3. Vous devez maîtriser les fondamentaux de Bash, vous pourrez en apprendre plus sur les commandes de bases [avec cet article](bash)
+3. Vous devez maîtriser les fondamentaux de Bash, vous pourrez en apprendre plus sur les commandes de bases [avec cet article](bash.md)
 
 ## Cloner le repo git
 
