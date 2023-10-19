@@ -11,8 +11,10 @@ tasks:
       cd student-docs
       mdbook build
   - deploy: |
+      if [ $BUILD_SUBMITTER != "git.sr.ht" ]; then
+          echo "Skipping deploy for non-git.sr.ht build"
+          exit
+      fi
       cd student-docs
       sshopts="ssh -o StrictHostKeyChecking=no"
       rsync --rsh="$sshopts" -avh --delete book/ $deploy:/var/www/docs.alias-asso.fr/
-
-  
