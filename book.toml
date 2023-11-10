@@ -7,4 +7,5 @@ title = "Documentation Alias"
 
 [output.html]
 no-section-label = true
-
+git-repository-url = "https://sr.ht/~alias/docs.alias-asso.fr/"
+git-repository-icon = "fa-git"
