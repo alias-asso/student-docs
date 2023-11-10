@@ -11,4 +11,6 @@ Que vous suiviez un cursus d'informatique ou non, cette documentation peut vous 
 
 Cette documentation est en constante évolution, c'est vous qui contribuez à l'ajout de données !  
 
-N'hésitez pas à suggérer des modifications sur notre [Discord](https://alias-asso.fr/discord). Ou bien à simplement poser une question, la réponse sera peut être ajoutée à la documentation !
+N'hésitez pas à suggérer des modifications sur notre [Discord](https://alias-asso.fr/discord). Ou bien à simplement poser une question, la réponse sera peut être ajoutée à la documentation !  
+
+Cette documentation, tout comme l'intégralité de nos outils proposés sont open-source, n'hésitez pas à proposer des modifications sur [notre repo !](https://sr.ht/~alias/docs.alias-asso.fr/)

@@ -64,7 +64,7 @@ Le WSL fait tourner Linux, Windows fait tourner Windows. Il ne faut pas les mél
 ## Installer les utilitaires de programmation
 
 ### Avant de continuer...
-Vous devriez [lire l'article sur les bases du Bash](https://github.com/Daisy-Road/wiki/wiki/Bash) afin de maîtriser grosso modo les commandes UNIX (et donc de Ubuntu) et ne pas avoir de problème pour maîtriser la suite
+Vous devriez [lire l'article sur les bases du Bash](bash.md) afin de maîtriser grosso modo les commandes UNIX (et donc de Ubuntu) et ne pas avoir de problème pour maîtriser la suite
 
 
 ### Installation de GCC
