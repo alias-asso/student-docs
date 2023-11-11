@@ -96,7 +96,7 @@ Entrer dans le dossier `MrPython-master` en utilisant la commande `cd`:
 
 > 💡 Remarquez la syntaxe de la commande `cd`, c'est une commande courante pour manipuler le Terminal. Elle signifie: "Change Directory" et vous y spécifier tujours à côté l'arborescence dans laquelle vous voulez accéder.
 
-Ensuite, exécuter la commande dans le terminal:
+Vous pouvez ensuite, exécuter la commande dans le terminal:
 ```bash
 python3.9 mrpython/Application.py
 ```
