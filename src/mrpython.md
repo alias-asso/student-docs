@@ -1,6 +1,6 @@
-# MrPython
+# [MrPython](http://nohtyprm.github.io/MrPython/install-FR.html)
 
-MrPython est un [IDE](https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement) ayant pour objectif l'apprentissage de Python et l'initiation aux bonnes habitudes de programmation.  
+MrPython est un [IDE](https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement) ayant pour objectif l'apprentissage de Python et l'initiation aux bonnes pratiques de programmation.  
 Ce logiciel est en général utilisé en première année de cursus informatique.  
 
 Pour télécharger MrPython, vous pouvez télécharger [l'installateur sur le site dédié](http://nohtyprm.github.io/MrPython/install-FR.html). Mais il est aussi préférable de l'installer depuis son [répertoire GitHub](https://github.com/nohtyprm/MrPython), car l'installation est commune à tous les ordinateurs, nous allons voir cette pratique ci-dessous.  
@@ -8,7 +8,9 @@ Pour télécharger MrPython, vous pouvez télécharger [l'installateur sur le si
 ## Installation de git
 
 Premièrement, vous devez être en possession de `git`, la méthode est différente selon vos systèmes d'exploitation...  
-> 💡Il est possible que vous connaissiez une site web du nom de [GitHub](https://github.com). Sachez que ces deux outils ne sont pas à confondre: Git est un logiciel qui permet entre autre de sauvegarder différentes versions de fichiers dans un repertoire pendant l'évolution d'un projet de programmation. GitHub est un service pour stocker sur le cloud un repertoire tel repertoire géré par Git.
+> 💡Il est possible que vous connaissiez une site web du nom de [GitHub](https://github.com). Sachez que ces deux outils ne sont pas à confondre:  
+Git est un logiciel qui permet entre autre de sauvegarder différentes versions de fichiers dans un repertoire pendant l'évolution d'un projet de programmation.  
+GitHub est un service pour stocker sur le cloud un tel repertoire géré par Git.
 
 ### Sur Windows
 
@@ -17,7 +19,7 @@ Vous pouvez télécharger `git` sur le [site web officiel](https://git-scm.com/)
 Pendant l'installation, de nombreuses options sont proposées, vous pouvez vous en tenir aux paramètres par défaut, si vous n'êtes pas sûr de ce que vous faites.    
 Toutefois, il est recommandé d'essayer de comprendre les options que vous sélectionnez, cela vous permettra de mieux comprendre la logique de `git`.  
 
-⚠️ Faites attention a bien ajouter le logiciel `git` dans le PATH à partir des options d'installations. Cela signifie que git sera un logiciel accessible à partir du terminal, ce qui est fondamental pour la suite, mais aussi pour l'utilisation de git en général. (En effet, `git` est originellement un logiciel de terminal).
+⚠️ Faites attention à bien ajouter le logiciel `git` dans le PATH à partir des options d'installations. Cela signifie que git sera un logiciel accessible à partir du terminal, ce qui est fondamental pour la suite, mais aussi pour l'utilisation de git en général. (En effet, `git` est originellement un logiciel de terminal).
 
 ### Sur MacOS
 
@@ -43,8 +45,8 @@ Pour pouvoir coder en Python, et éventuellement utiliser MrPython, vous devez d
 
 ### Sur Windows
 
-Vous pouvez installer Python sur le [site officiel](https://www.python.org/)  
-**ATTENTION** Installer la version de Python 3.9, et non pas la plus récente. La version 3.9 est la plus courante, mais aussi la dernière version fonctionnel pour exécuter MrPython.  
+Vous pouvez installer Python sur le [site officiel](https://www.python.org/)   
+⚠️**ATTENTION** Installer la version de Python 3.9, et non pas la plus récente. La version 3.9 est la plus courante, mais aussi la dernière version fonctionnelle pour exécuter MrPython.  
 
 ### Sur MacOS
 
@@ -68,13 +70,14 @@ Cloner MrPython ? Et oui, c'est effectivemment le bon terme ! Nous allons cloner
 
 Pas de panique, c'est facile, cette fois-ci la démarche est la même pour tous les systèmes d'exploitation ;)  
 
-Nous aloons tout d'abord nous mettre dans un repertoire (ou dossier) idéal pour l'installation de MrPython. Prenez n'importe lequel, nous assumerons ici que vous avez choisi le dossier `Documents`
+Nous allons tout d'abord nous mettre dans un repertoire (ou dossier) idéal pour l'installation de MrPython. Prenez n'importe lequel, nous assumerons ici que vous avez choisi le dossier `Documents`
 
 Ouvrez le terminal et utiliser la commande:
 ```bash
 cd Documents
 ```
-Pour vous déplacer dans le repertoire `Documents`. Assurez vous que vous êtes bien dans votre dossier personnel, à savoir sur Windows: `C:\Users\NOM`, ou sur Linux/MacOS: `/home/NOM`   
+Pour vous déplacer dans le repertoire `Documents`.  
+Assurez vous que vous êtes bien dans votre dossier personnel, à savoir sur Windows: `C:\Users\NOM`, ou sur Linux/MacOS: `/home/NOM`   
 
 Une fois à l'intérieur nous allons cloner le reprtoire Git disponible sur GitHub. Pour cela utilisons `git` dans le Terminal en exécutant la commande suivante:
 ```bash
@@ -119,7 +122,7 @@ Notez que le chemin d'accès de votre dossier personnel varie selon votre systè
 
 Sauvegardez ce fichier sous un format de script, de préférence sur votre Bureau, pour qu'il soit cliquable:
 
-- Sur Windows enregistrez le comme fichier `.batch`
+- Sur Windows enregistrez le comme fichier `.bat`
 - Sur MacOS/Linux, enregistrez le comme un fichier `.sh`
 
 <u>**NB:**</u> Sur les systèmes Linux/MacOS, vous devrez sans doute rendre ce fichier exécutable en plus: Ouvrez alors le terminal et exécuter la commande `chmod`
