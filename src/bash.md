@@ -126,7 +126,7 @@ fi
 ```
 
 Une forme condensée : 
-`[ condition ]` $\Leftrightarrow$ `[[ condition ]]` $\Leftrightarrow$ test condition : 
+`[ condition ]` \\( \Leftrightarrow \\) `[[ condition ]]`: 
 - renvoie 0 si le test est vrai 
 - renvoie une valeur non nulle sinon
 
