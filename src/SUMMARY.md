@@ -13,6 +13,7 @@
 - [Cini](./cini.md)
 
 # Général
-- [Linux/Unix](./unix.md)
-- [Bash](./bash.md)
+- [Linux](./linux.md)
+  - [Fedora](fedora.md)
+  - [Bash](./bash.md)
 - [Éditeurs de code](./code-editors.md)
