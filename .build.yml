@@ -6,6 +6,8 @@ secrets:
   - 377b1655-4b5b-43a9-8cee-e48808fd7e55
 environment:
   deploy: build@alias-asso.fr
+sources:
+  - https://git.sr.ht/~alias/student-docs#main
 tasks:
   - build: |
       cd student-docs
