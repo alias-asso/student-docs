@@ -26,9 +26,9 @@ La première chose à faire est de vérifier si on a assez d'espace sur son disq
 
 Vous devez ensuite vérifier si votre disque contenant Windows n'est pas chiffré. Pour cela, cherchez "Bitlocker", ou "Chiffrement" dans la barre de recherche. Vous devriez trouver une page du panneau de configuration vous permettant de désactiver *Bitlocker*, le système de chiffrement de Windows. Ce système de chiffrement empêche l'installation d'un autre OS.
 
-TODO: Ajouter une image
+![bitlocker win 11](./content/bitlocker.png)
 
-*Désactivation de Bitlocker sous [Version windows de l'image] (l'interface peut varier selon les versions de WIndows)*
+*Désactivation de Bitlocker sous Windows 11 (l'interface peut varier selon les versions de Windows)*
 
 ### 2 - Libérer de l'espace dans la table de partitions
 
@@ -85,9 +85,100 @@ Une fois cela fait, vous pouvez sauvegarder et quitter le BIOS.
 
 Il est possible qu'un message d'affiche pour vous prévenir que la clé n'est pas vérifiée. Continuez, et attendez que l'ordinateur démarre sur la clé. L'ISO de Fedora sur la clé sera utilisé comme système d'exploitation pour l'ordinateur. La clé contient un Fedora totalement fonctionnel, avec une application permettant l'installation sur le vrai disque dur de l'ordinateur.
 
+Lors du démarrage sur la clé, vous verrez tout d'abord un écran de séléction de Ventoy où vous pourrez choisir de démarrer sur Fedora. Vous verrez ensuite un deuxième écran de séléction, où il faut choisir la première entrée (pas l'entrée séléctionnée par defaut)
+
+![fedora grub iso](./content/fedora_ios_grub.png)
+
 ### 5 - Installation
 
-TODO: Continuer :c
+Après avoir démaré la clé, vous devriez voir un bureau linux avec un logiciel d'installation. Cliquez sur **Install Fedora**, puis séléctionnez votre langue.
 
+Cliquez alors sur **Installation Destination**. Vous verrez alors un écran vous montrant vos disques. Dans *configuration du stockage*, cliquez sur **personnalisé** puis validez avec le bouton **fait**
 
+![install screen 1](./content/install_partitions_1.jpg)
 
+Vous allez maintenant devoir créer deux partitions pour Fedora. La première est nécessaire pour déparer tout ce qui est lié au démarrage du reste du système, et la deuxième contiendra le système. Cliquez sur le **+** en bas, et rentrez `/boot/efi` dans le champ *Point de montage* et `1G` dans le champ *Capacité souhaitée*. Cela permet de créer une partition de 1 Go, qui sera montée dans le système de fichier de linux au chemin `/boot/efi`.
+
+> ⚠️ Le clavier sera en **qwerty** sur le système présent sur la clé USB. Le `/` correspond à la touche `!` d'un azerty, et le `!` correspond au `1` en azerty.
+
+![create boot partition](./content/create_boot_partition.png)
+
+Il faut ensuite créer la partition racine du système, qui occupera tout le reste de l'espace. Cliquez à nouveau sur le **+**, et rentrez `/` dans *Point de montage* et `!` dans *Capacité souhaitée*. Le `!` permet d'allouer tout l'espace restant. 
+
+![create root partition](./content/create_root_partition.png)
+
+Une fois que tout est fait, cliquez sur **fait**, et cliquez sur **Commencer l'installation**.
+
+Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC, et débrancher la clé. Vous devriez alors voir un écran de séléction vous demandant de choisir entre Windows et Fedora.
+
+### 6 - Post Installation
+
+Après l'installation, une fenêtre de configuration d'affichera. Plusieurs opention peuvent être activées ou non, et ces valeurs peuvent être changées à nouveau à tout moment dans les paramètres.
+
+- Choisissez si vous voulez activer la localisation et l'envoi de rapports de crash
+- Nous vous conseillons d'activer les dépots tiers, qui vous permettent d'avoir plus de choix de programmes à installer, dont certains sont utiles pour les cours d'informatique.
+- Pour votre nom d'utilisateur, il est conseillé d'utiliser votre prénom, en minuscule. Le nom complet n'est pas important.
+- Choisissez un mot de passe.
+
+Votre système est maintenant totalement utilisable, mais il y a plusieurs éléments important à savoir:
+
+**Mettez régulièrement à jour votre système !** Pour cela, vous pouvez ouvrir un terminal et taper la commande :
+
+```sh
+sudo dnf update
+```
+
+> ☝️🤓 `sudo` est une commande permettant de lancer d'autres commandes en mode administrateur. Pour protéger votre système, votre utilisateur par défaut n'a pas toutes les permissions, mais pour faire des mises à jour, il est obligatoire d'être administrateur du système.
+
+> ℹ️ Quand on vous demande d'entrer votre mot de passe dans le terminal, il est normal que vous ne voyiez pas les caractères que vous tapez au clavier, c'est un mécanisme de protection de linux, pour éviter qu'une personne devine la longueur de votre mot de passe en regardant votre écran derrière vous.
+
+Des questions vous seront posées pour confirmer les mises à jour, vous pouvez répondre oui avec la lettre **O** en majuscule.
+
+La première mise à jour du système peut prendre du temps, mais le reste du temps, les mises à jour devraient être plus rapide si vous les faites régulièrement (environs une fois par semaine). Il est important de mettre à jour votre système pour éviter les problèmes de compatibilité lorsque vous installez de nouveaux programmes. Cela permet également une meilleure sécurité.
+
+**Pour installer un programme**, il faut taper la commande :
+
+```sh
+sudo dnf install nom_du_programme
+```
+
+Vous pouvez trouver le nom précis du programme avec :
+
+```sh
+dnf search nom_recherché
+```
+
+Il est également possible de chercher le nom d'un programme [ici](https://packages.fedoraproject.org/).
+
+> ℹ️ Il est également possible de faire les mises à jour et d'installer les programmes via l'interface graphique **Logiciels**, présent par défaut sur Fedora, mais ce n'est pas recommandé, en effet, il sera alors difficile de comprendre d'où vient un problème de mise à jour en l'absence de logs dans le terminal.
+
+### 7 - Ajouts optionnels
+
+Certains programmes comme discord ne sont pas installable par défaut avec `dnf`. Vous pouvez ajouter des dépots supplémentaires appelé [RPM Fusion](https://doc.fedora-fr.org/wiki/D%C3%A9p%C3%B4t_RPM_Fusion) permettant d'ajouter des paquets supplémentaires. L'installation est très simple, il suffit de taper ces commandes dans le terminal, à la suite :
+
+```sh
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
+```sh
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+**Visual Studio Code** n'est ni présent sur les dépots de Fedora, ni sur RPM Fusion. Pour l'installer, il faut d'abord ajouter [les dépots de Microsoft](https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions) :
+
+```sh
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+```
+
+```sh
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+```
+
+```sh
+sudo dnf check-update
+```
+
+Vous pouvez maintenant installer VSCode avec :
+
+```sh
+sudo dnf install code
+```
