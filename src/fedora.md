@@ -47,7 +47,7 @@ Faites un clique droit dessus, et cliquez sur **réduire le volume**. Vous devez
 
 Une fois la partition réduite, vous devrize avoir de l'espace libre, sur lequel on pourra installer linux.
 
-### Création du medium d'installation
+### 3 - Création du medium d'installation
 
 Munissez vous de votre clé USB, et téléchargez le [fichier iso](https://fr.wikipedia.org/wiki/Image_disque) de Fedora, disponible sur [leur site](https://fedoraproject.org/fr/workstation/). 
 
@@ -61,7 +61,31 @@ Votre clé dvevrait alors apparaitre dans la liste des disques de l'explorateur 
 
 Les étapes sous windows sont maintenant terminées !
 
-### Vérification des paramètres dans le BIOS
+### 4 - Vérification des paramètres dans le BIOS
+
+Cette partie est la plus difficile à expliquer, parce qu'elle dépend du modèle et de la marque de votre PC.
+
+Vous allez devoir acceder au **BIOS** de votre PC. Le BIOS est un micro système d'exploitation vous permettant de modifier des paramètres du matériel de votre ordinateur. Nous allons devoir modifier et/ou vérifier certains paramètres. Selon la marque l'interface du BIOS peut complètement changer, il est donc possible que les indications données ici ne soient pas réalisable chez vous, où que vous ne trouviez pas les choses demandées, pas de panique, le plus souvent une recherche google avec le modèle de votre PC et le paramètre recherché vous expliquera quoi faire dans ce cas.
+
+> ☝️🤓 Sur la plupart des PC récent, le BIOS est remplacé par l'[UEFI](https://fr.wikipedia.org/wiki/UEFI), qui lui succède. Quand on parle de BIOS, c'est très souvent un abus de langage pour dire UEFI.
+
+La première chose à faire est d'éteindre votre PC, puis de l'allumer, et lors du démarrage, quand vous voyez le premier logo (celui de la marque de l'ordinateur), appuyer sur la touche permettant d'accéder au BIOS. Cette touche varie selon les marques et les modèles. Cette image indique les touche des marques les plus populaires. Si votre PC n'est pas sur l'image, ou que la touche ne marche pas, n'hésitez pas à chercher sur internet.
+
+![Bios keys](./content/bios_keys.png)
+
+Une fois dans le BIOS, vous devriez être face à écran, qui peut ressembler à ça (ou non, selon votre PC) :
+
+![Bios main](./content/bios_main.jpg)
+
+Il faut alors trouver la catégorie **boot** (ou un nom similaire), et trouver ce que l'on appelle **l'ordre de boot**. Cet ordre définit que quel disque l'ordinateur va essayer de cherger un système d'exploitation en premier. On veut donc mettre la clé usb contenant Fedora en premier.
+
+![Bios boot](./content/bios_boot.jpg)
+
+Une fois cela fait, vous pouvez sauvegarder et quitter le BIOS.
+
+Il est possible qu'un message d'affiche pour vous prévenir que la clé n'est pas vérifiée. Continuez, et attendez que l'ordinateur démarre sur la clé. L'ISO de Fedora sur la clé sera utilisé comme système d'exploitation pour l'ordinateur. La clé contient un Fedora totalement fonctionnel, avec une application permettant l'installation sur le vrai disque dur de l'ordinateur.
+
+### 5 - Installation
 
 TODO: Continuer :c
 
