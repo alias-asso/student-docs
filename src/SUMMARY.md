@@ -16,4 +16,7 @@
 - [Linux](./linux.md)
   - [Fedora](fedora.md)
   - [Bash](./bash.md)
-- [Éditeurs de code](./code-editors.md)
+- [Éditeurs de code](./code_editors.md)
+
+# Alias
+- [Dons de PC](./dons_pc.md)
