@@ -3,7 +3,7 @@ packages:
   - mdbook
   - rsync
 secrets:
-  - 377b1655-4b5b-43a9-8cee-e48808fd7e55
+  - 46f739e5-4538-45dd-a79f-bf173b7a2ed9
 environment:
   deploy: build@alias-asso.fr
 sources:
