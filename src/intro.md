@@ -10,6 +10,5 @@ Que vous suiviez un cursus d'informatique ou non, cette documentation peut vous 
 ## Fait pour vous, enrichi par vous
 
 Cette documentation est en constante évolution, c'est vous qui contribuez à l'ajout de données.  
-N'hésitez pas à suggérer des modifications ou à poser vos questions sur notre [Discord](https://alias-asso.fr/discord) ou notre [mailing list](https://lists.sr.ht/~alias/services-discuss), ainsi que de proposer des [patchs par mail](https://git-send-email.io/) sur le [mailing list correspondant](https://lists.sr.ht/~alias/services) !
-
-Cette documentation, tout comme l'intégralité de nos outils proposés sont open-source, [retrouvez les tous ici](https://sr.ht/~alias).
+N'hésitez pas à suggérer des modifications ou à poser vos questions sur notre [Discord](https://alias-asso.fr/discord) en [contribuant au contenu](https://github.com/alias-asso)
+Cette documentation, tout comme l'intégralité de nos outils proposés sont open-source, [retrouvez les tous ici](https://github.com/alias-asso).
