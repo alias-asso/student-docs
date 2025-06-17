@@ -52,6 +52,6 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -H ${{ secrets.DEPLOY_HOSTNAME }} >> ~/.ssh/known_hosts
       - name: Deploy with rsync
-        run: rsync -avh --delete ./book/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOSTNAME }}:/var/www/docs.alias-asso.fr/
+        run: rsync --rsh="ssh -o StrictHostKeyChecking=no" -avh --delete ./book/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOSTNAME }}:/var/www/docs.alias-asso.fr/
 
 
