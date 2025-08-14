@@ -91,7 +91,39 @@ Lors du démarrage sur la clé, vous verrez tout d'abord un écran de séléctio
 
 ### 5 - Installation
 
-Après avoir démaré la clé, vous devriez voir un bureau linux avec un logiciel d'installation. Cliquez sur **Install Fedora**, puis séléctionnez votre langue.
+Après avoir démaré la clé, vous devriez voir un bureau linux avec un logiciel d'installation. Cliquez sur **Install Fedora**, puis séléctionnez votre langue ainsi que le format de votre clavier.
+
+Vous avez le choix de configurer les partition où utiliser les paramètres par défaut. Référer vous à la section 5.a pour la configuration des partitions.
+
+Sinon, choisissez si vous voulez garder Windows avec `Partager le disque avec un autre système d'exploitattion`. Dans le cas où vous voudriez n'utiliser que Fedora cliquer sur `Utiliser le disque tout entier`.
+
+> ⚠️ Cette opération supprimera Windows définitivement de votre ordinateur. Assurez vous d'avoir sauvegarder vos fichier et de vouloir supprimer Windows.
+
+<!-- Rajouter image
+![install screen 1](./content/install_disque.jpg)
+-->
+
+Il est conseillé d'encrypter vos données. Pour cela, cocher la case `Chiffrer vos données`. N'oublier pas de changer la dispostion du clavier pour le mot de passe. 
+
+<!-- Rajouter image
+![install screen 2](./content/install_chiffrement.jpg)
+-->
+
+> ⚠️ Le clavier sera en **qwerty** sur le système présent sur la clé USB. Aller sur l'application Settings > Keyboard > Add input source > French (France) > French (AZERTY). Enfin selectionner dans la bar en haut de votre écran en et choisissez fr.
+
+> ⚠️ Noter bien la phrases secrète. Sans elle vous perdez vos données à jamais. Si vous n'ètes pas sûr, sauter cette étape.
+
+Vous pouvez maintenant cliquer sur Installer. L'installation se faite automatiquement.
+
+Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC, et débrancher la clé. Vous devriez alors voir un écran de séléction vous demandant de choisir entre Windows et Fedora.
+
+#### 5.a - Configuration des partitions
+
+<!-- TODO -- Écrire le texte -->
+
+<!--
+
+![install screen 1](./content/install_partitions_1.jpg)
 
 Cliquez alors sur **Installation Destination**. Vous verrez alors un écran vous montrant vos disques. Dans *configuration du stockage*, cliquez sur **personnalisé** puis validez avec le bouton **fait**
 
@@ -109,7 +141,7 @@ Il faut ensuite créer la partition racine du système, qui occupera tout le res
 
 Une fois que tout est fait, cliquez sur **fait**, et cliquez sur **Commencer l'installation**.
 
-Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC, et débrancher la clé. Vous devriez alors voir un écran de séléction vous demandant de choisir entre Windows et Fedora.
+-->
 
 ### 6 - Post Installation
 
