@@ -16,6 +16,8 @@ Pour réaliser l'installation, le seul matériel nécessaire est **une clé USB*
 
 > ⚠️ L'installation de linux n'est pas sans risques, et peut vous faire perdre vos données. Pensez bien à faire une sauvegarde avant de vous lancer, et de bien brancher votre ordinateur sur le secteur lors de l'installation, pour éviter que le PC ne s'éteigne lors d'une étape critique.
 
+Fedora propose deux version de leur distribution. La première est la workstation, elle est complète et légère. Si l'espace sur votre disque est un facteur, c'est celle ci que l'on vous conseille. L'autre version utilise KDE plasma, qui se rapproche le plus de l'utilisation que vous pouriez avoir sous Windows. Elle vient avec plusieurs application et est donc plus gourmande en performance et en stockage. Cela étant dit, vous restez sous Linux et donc le gain en performance et la durée de votre batterie reste non-négligeable.
+
 ### 1 - Vérifications à faire
 
 Avant d'installer une districution linux, il y a plusieurs informations à vérifier.
@@ -49,7 +51,7 @@ Une fois la partition réduite, vous devrize avoir de l'espace libre, sur lequel
 
 ### 3 - Création du medium d'installation
 
-Munissez vous de votre clé USB, et téléchargez le [fichier iso](https://fr.wikipedia.org/wiki/Image_disque) de Fedora, disponible sur [leur site](https://fedoraproject.org/fr/workstation/). 
+Munissez vous de votre clé USB, et téléchargez le [fichier iso](https://fr.wikipedia.org/wiki/Image_disque) de Fedora. Les deux iso sont diponible sur leur site avec la version [workstation ici](https://fedoraproject.org/fr/workstation/) et la version [KDE plasma ici](https://fedoraproject.org/fr/kde/).
 
 Nous allons ensuite installer **Ventoy** sur la clé. Ventoy est un outil permettant de faciliter le démarrage de fichiers iso contenant un système d'exploitation sur une clé USB. Téléchargez ventoy depuis [leur site](https://www.ventoy.net/en/download.html), et lancez **Ventoy2Disk**. Séléctionnez votre clé USB (vérifier bien que c'est votre clé et pas un disque de votre dordinateur) et cliquez sur **install**.
 
@@ -89,7 +91,7 @@ Lors du démarrage sur la clé, vous verrez tout d'abord un écran de séléctio
 
 ![fedora grub iso](./content/fedora_ios_grub.png)
 
-### 5 - Installation
+### 5 - Installation sous workstation
 
 Après avoir démaré la clé, vous devriez voir un bureau linux avec un logiciel d'installation. Cliquez sur **Install Fedora**, puis séléctionnez votre langue ainsi que le format de votre clavier.
 
@@ -121,13 +123,17 @@ Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC, et dé
 
 <!-- TODO -- Écrire le texte -->
 
-<!--
+### 5 bis - Installation sous KDE plasma
 
-![install screen 1](./content/install_partitions_1.jpg)
+Quand vous démarez sous KDE plasma vous arrivez sur la version test. Pour l'installer utiliser l'installateur situé en haut à gauche.
+
+![install screen kde 1](./content/install_kde.png)
+
+<!-- Option de configuration -->
 
 Cliquez alors sur **Installation Destination**. Vous verrez alors un écran vous montrant vos disques. Dans *configuration du stockage*, cliquez sur **personnalisé** puis validez avec le bouton **fait**
 
-![install screen 1](./content/install_partitions_1.jpg)
+![install screen kde 3](./content/install_partitions_1.jpg)
 
 Vous allez maintenant devoir créer deux partitions pour Fedora. La première est nécessaire pour déparer tout ce qui est lié au démarrage du reste du système, et la deuxième contiendra le système. Cliquez sur le **+** en bas, et rentrez `/boot/efi` dans le champ *Point de montage* et `1G` dans le champ *Capacité souhaitée*. Cela permet de créer une partition de 1 Go, qui sera montée dans le système de fichier de linux au chemin `/boot/efi`.
 
