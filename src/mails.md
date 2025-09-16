@@ -18,11 +18,10 @@ Dans votre application favorite, suivez ces étapes attentivement:
 
 **Serveur**: `imaps.sorbonne-universite.fr`  
 **Port**: `993`  
+**Nom d'utilisateur**: Votre numéro étudiant  
 **Mot de passe**: Le même que vous utilisez pour vous connecter sur Moodle
 
 ⚠️ Si cela est requis **n'oubliez pas** d'activer l'authentification [**SSL**](https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https) ou **SSL/TLS** (et non pas juste TLS)
-
->💡 S'il faut renseigner un nom d'utilisateur, il s'agira ici de votre adresse e-mail étudiante
 
 ### Renseignez le **_serveur mail sortant_** ([SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol))
 
