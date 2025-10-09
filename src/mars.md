@@ -8,7 +8,7 @@ Mars a été compilé avec Java 1.5 (dit Java 5). Il est préférable d'installe
 
 Mars est téléchargeable sur [GitHub](https://github.com/dpetersanderson/MARS/releases/tag/v.4.5.1). Il est disponible sous le nom de `Mars4_5.jar` dans les assets. Le lien direct est disponible [ici](https://github.com/dpetersanderson/MARS/releases/download/v.4.5.1/Mars4_5.jar).
 
-Après avoir installé Java et télécharger le fichier `.jar`, il suffit d'exécuter le `.jar` pour lancer Mars.
+Après avoir installé Java et téléchargé le fichier `.jar`, il suffit d'exécuter le `.jar` pour lancer Mars.
 
 Si vous n'arrivez pas le lancer avec votre environnement graphique, vous pouvez le lancer en ligne de commande :
 ```bash
