@@ -37,4 +37,19 @@ Et voilà ! C'est terminé !
 
 ## Exemple Gmail (mobile)
 
-![gmail 1](./content/mails/gmail_mailbox.png) ![gmail 2](./content/mails/gmail_account_select.png) ![gmail 3](./content/mails/gmail_select_service.png) ![gmail 4](./content/mails/gmail_in_user.png) ![gmail 5](./content/mails/gmail_in_mode) ![gmail 6](./content/mails/gmail_in_server.png) ![gmail 7](./content/mails/gmail_out_server.png)
+![gmail 1](./content/mails/gmail_mailbox.png)
+![gmail 2](./content/mails/gmail_account_select.png)
+![gmail 3](./content/mails/gmail_select_service.png)
+![gmail 4](./content/mails/gmail_in_user.png)
+![gmail 5](./content/mails/gmail_in_mode)
+![gmail 6](./content/mails/gmail_in_server.png)
+![gmail 7](./content/mails/gmail_out_server.png)
+
+## Exemple Thunderbird (desktop)
+
+![thunderbird 1](./content/mails/thunderbird_settings.png)
+![thunderbird 2](./content/mails/thunderbird_accounts.png)
+![thunderbird 3](./content/mails/thunderbird_address.png)
+![thunderbird 4](./content/mails/thunderbird_in_server.png)
+![thunderbird 5](./content/mails/thunderbird_out_server.png)
+![thunderbird 6](./content/mails/thunderbird_password.png)
