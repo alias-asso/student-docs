@@ -16,9 +16,10 @@ Pour réaliser l'installation, le seul matériel nécessaire est **une clé USB*
 
 > ⚠️ L'installation de linux n'est pas sans risques, et peut vous faire perdre vos données. Pensez bien à faire une sauvegarde avant de vous lancer, et de bien brancher votre ordinateur sur le secteur lors de l'installation, pour éviter que le PC ne s'éteigne lors d'une étape critique.
 
-Fedora propose deux versions de leur distribution. La première est la workstation (Gnome), elle est complète et légère. Si l'espace sur votre disque est un facteur. L'autre version utilise KDE plasma, qui se rapproche le plus de l'utilisation que vous pourriez avoir sous Windows. Elle vient avec plusieurs applications et est donc plus gourmande en performance et en stockage. Cela étant dit, vous restez sous Linux et donc le gain en performance et le gain sur la durée de votre batterie reste non-négligeable.
+Fedora propose deux versions de leur distribution. La première est la workstation (GNOME), qui est l'environnement présent en salle machine de la PPTI de Sorbonne Université. L'autre version utilise KDE plasma, qui se rapproche le plus de l'utilisation que vous pourriez avoir sous Windows.
 
-> Pour une première utilisation de Linux, l'ALIAS recommande la version workstation qui est identique graphiquement au machine proposé à la PPTI de Sorbonne Université.
+> Pour une première utilisation de Linux, l'ALIAS recommande la version workstation (avec GNOME) qui est identique graphiquement au machine proposé à la PPTI de Sorbonne Université. C'est notamment la version qui est installée au Install Party proposé par l'ALIAS.
+
 
 ### 1 - Vérifications à faire
 
@@ -118,7 +119,7 @@ Vous pouvez maintenant cliquer sur Installer. L'installation se fait automatique
 
 ![install screen 3](./content/fedora_install.png)
 
-Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC, et débrancher la clé. Vous devriez alors voir un écran de sélection vous demandant de choisir entre Windows et Fedora.
+Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC et débrancher la clé. Vous devriez alors voir un écran de sélection vous demandant de choisir entre Windows et Fedora.
 
 #### 5.a - Configuration des partitions manuelle
 
@@ -139,9 +140,9 @@ Fedora recommande les partitions suivante :
 | Sous partition root | /                | le reste de votre disque | BTRFS subvolume |
 | Sous partition home | /home            | -                        | BTRFS subvolume |
 
-Les points de montage `/` et `/home` font partie du sous volume BTRFS qui partage leur espaces. Vous pouvez aussi les mettre tous les deux en EXT4, cela demande cependant de leur donner une taille à chacun.
+Les points de montage `/` et `/home` font partie du sous volume BTRFS qui partage leur espaces. Vous pouvez aussi les mettre tous les deux en EXT4, cela demande cependant de leur donner une taille à chacun d'entre eux.
 
-Vous avez aussi l'option de créer une partition de swap. Cela est utile si vous voulez faire hiberner votre ordinateur ou que vous avez moins de 4 Go de RAM. La partition SWAP prend en général la taille de la RAM.
+Vous avez aussi l'option de créer une partition de swap. Cela est utile si vous voulez faire hiberner votre ordinateur ou si vous avez moins de 4 Go de RAM. La partition SWAP fait en général la même taille que la RAM.
 
 ### 6 - Post Installation
 
