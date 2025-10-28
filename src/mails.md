@@ -2,7 +2,7 @@
 
 ## Synchroniser sa boîte mail Sorbonne
 
-Il peut être difficile d'utiliser Zimbra, dans cet article nous verrons comment synchroniser votre boîte mail de l'université avec votre client mail principal.  
+Il peut être difficile d'utiliser Zimbra, dans cet article nous verrons comment synchroniser votre boîte mail de l'université avec votre client mail principal.
 
 Nous allons ici se connecter aux serveurs mails, ce qui vous permettra aussi de répondre et de gérer votre boîte mail directement via votre application de messagerie préférée sans jamais plus à avoir à vous connecter sur la plateforme Zimbra.
 
@@ -16,8 +16,8 @@ Dans votre application favorite, suivez ces étapes attentivement:
 
 ### Renseignez le **_serveur mail entrant_**
 
-**Serveur**: `imaps.sorbonne-universite.fr`  
-**Port**: `993`  
+**Serveur**: `imaps.sorbonne-universite.fr`
+**Port**: `993`
 **Mot de passe**: Le même que vous utilisez pour vous connecter sur Moodle
 
 ⚠️ Si cela est requis **n'oubliez pas** d'activer l'authentification [**SSL**](https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https) ou **SSL/TLS** (et non pas juste TLS)
@@ -26,11 +26,15 @@ Dans votre application favorite, suivez ces étapes attentivement:
 
 ### Renseignez le **_serveur mail sortant_** ([SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol))
 
-**Serveur**: `smtps.sorbonne-universite.fr`  
-**Port**: `465`  
-**Nom d'utilisateur**: Votre numéro étudiant  
-**Mot de passe**: Le même que vous utilisez pour vous connecter sur Moodle  
+**Serveur**: `smtps.sorbonne-universite.fr`
+**Port**: `465`
+**Nom d'utilisateur**: Votre numéro étudiant
+**Mot de passe**: Le même que vous utilisez pour vous connecter sur Moodle
 
-⚠️ Une fois de plus, si cela est requis **n'oubliez pas** d'activer l'authentification **SSL** ou **SSL/TLS** (et non pas juste TLS)  
+⚠️ Une fois de plus, si cela est requis **n'oubliez pas** d'activer l'authentification **SSL** ou **SSL/TLS** (et non pas juste TLS)
 
 Et voilà ! C'est terminé !
+
+## Exemple Gmail (mobile)
+
+![gmail 1](./content/mails/gmail_mailbox.png) ![gmail 2](./content/mails/gmail_account_select.png) ![gmail 3](./content/mails/gmail_select_service.png) ![gmail 4](./content/mails/gmail_in_user.png) ![gmail 5](./content/mails/gmail_in_mode) ![gmail 6](./content/mails/gmail_in_server.png) ![gmail 7](./content/mails/gmail_out_server.png)
