@@ -12,7 +12,7 @@
 - [Environnement C](./env_c.md)
 - [Cini](./cini.md)
 - [Mars](./mars.md)
-- [Mars](./logisim.md)
+- [Logisim](./logisim.md)
 
 # Général
 - [Linux](./linux.md)
