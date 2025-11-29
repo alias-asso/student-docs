@@ -20,11 +20,11 @@ si vous utilisez Snap (comme avec Ubuntu).
 
 Si vous utilisez Arch Linux (comme moi, btw), vous pouvez directement build le logiciel sur votre ordinateur depuis le [paquet AUR](https://aur.archlinux.org/packages/logisim-evolution) (la version binaire n'est plus maintenue). Si vous avez une autre version de Java installé, exécuter `archlinux-java set java-21-openjdk` pour bien utiliser Java 21 !
 
-Si aucune de ces solutions ne vous convient, vous pouvez télécharger le fichier `.deb` ou `.rpm` [depuis Github](https://github.com/logisim-evolution/logisim-evolution/releases/latest). Si vous utilisez une distribution Linux n'utilisant pas le format deb ou rpm, sautez à la section "Autre".
+Si aucune de ces solutions ne vous convient, vous pouvez télécharger le fichier `.deb` ou `.rpm` [depuis Github](https://github.com/logisim-evolution/logisim-evolution/releases/latest). Si vous utilisez une distribution Linux n'utilisant pas le format deb ou rpm, sautez à la section ["Autre"](#autre).
 
 ## Windows
 
-Logisim-evolution est facilement installable sur Windows à l'aide d'un installateur. Il est disponible [sur GitHub](https://github.com/logisim-evolution/logisim-evolution/releases/latest) : il suffit de télécharger le fichier finissant par `amd64.msi` et de l'exécuter. Si cette version ne fonctionne pas, sautez à la section "Autre".
+Logisim-evolution est facilement installable sur Windows à l'aide d'un installateur. Il est disponible [sur GitHub](https://github.com/logisim-evolution/logisim-evolution/releases/latest) : il suffit de télécharger le fichier finissant par `amd64.msi` et de l'exécuter. Si cette version ne fonctionne pas, sautez à la section ["Autre"](#autre).
 
 ## Mac
 
@@ -40,13 +40,15 @@ Sinon, vous pouvez télécharger le fichier [sur GitHub](https://github.com/logi
 >
 > Depending on your security settings, you may also get a panel asking if you wish to allow it to accept network connections. You can click "Deny" as we do not need network access currently nor we do request any.
 
-N'utilisant moi-même pas un Mac, je ne peux pas vous donner plus d'informations. Si vous avez besoin d'aide, n'hésitez pas à rejoindre [notre Discord](https://discord.gg/Qq6u8Mz) et si vous avez plus d'information que moi à ce sujet, n'hésitez pas à compléter la doc [en forkant le repo GitHub](https://github.com/alias-asso/student-docs/) :D
+N'utilisant moi-même pas un Mac, je ne peux pas vous donner plus d'informations. Si vous avez besoin d'aide, n'hésitez pas à rejoindre [notre Discord](https://discord.gg/Qq6u8Mz) et si vous avez plus d'information que moi à ce sujet, n'hésitez pas à compléter la doc [en ouvrant une PR](https://github.com/alias-asso/student-docs/) :D
 
-Si cette version ne fonctionne pas, sautez à la section "Autre".
+Si cette version ne fonctionne pas, sautez à la section ["Autre"](#autre).
 
 ## Autre
 
 Logisim-evolution est une application compilée avec Java 21 (ou une version plus récente). Vous pouvez la télécharger et l'installer depuis [le site d'Oracle](https://www.oracle.com/java/technologies/downloads/#java21) si vous êtes sur Windows ou Mac, ou depuis votre package manager si vous êtes sous Linux (rechercher un paquet qui s'appelle `jdk21-openjdk` ou `java-21-openjdk` ou `openjdk-21-jre`).
+
+Si vous utilisez [Mars](./mars.md), nous vous recommandons fortement de lire la section ["Utiliser une autre version de Java"](./mars.md#utiliser-une-autre-version-de-java).
 
 Vous pouvez ensuite télécharger le fichier finissant par `all.jar` [depuis GitHub](https://github.com/logisim-evolution/logisim-evolution/releases/latest). Pour le lancer, il suffit de double cliquer dessus ou d'exécuter la commande
 ```bash
