@@ -1,14 +1,14 @@
 [book]
-authors = ["Alias"]
+authors = ["ALIAS"]
 language = "fr"
 multilingual = false
 src = "src"
-title = "Documentation Alias"
+title = "Documentation ALIAS"
 
 [output.html]
 default-theme = "ayu"
 preferred-dark-theme = "ayu"
 no-section-label = true
-git-repository-url = "https://sr.ht/~alias/docs.alias-asso.fr/"
+git-repository-url = "https://github.com/alias-asso/student-docs/"
 git-repository-icon = "fa-git"
 mathjax-support = true
