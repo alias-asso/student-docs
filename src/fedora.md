@@ -16,11 +16,17 @@ Pour réaliser l'installation, le seul matériel nécessaire est **une clé USB*
 
 > ⚠️ L'installation de linux n'est pas sans risques, et peut vous faire perdre vos données. Pensez bien à faire une sauvegarde avant de vous lancer, et de bien brancher votre ordinateur sur le secteur lors de l'installation, pour éviter que le PC ne s'éteigne lors d'une étape critique.
 
+Fedora propose deux versions de leur distribution. La première est la workstation (GNOME), qui est l'environnement présent en salle machine de la PPTI de Sorbonne Université. L'autre version utilise KDE plasma, qui se rapproche le plus de l'utilisation que vous pourriez avoir sous Windows.
+
+> Pour une première utilisation de Linux, l'ALIAS recommande la version workstation (avec GNOME) qui est identique graphiquement au machine proposé à la PPTI de Sorbonne Université. C'est notamment la version qui est installée au Install Party proposé par l'ALIAS.
+
+
 ### 1 - Vérifications à faire
 
 Avant d'installer une districution linux, il y a plusieurs informations à vérifier.
 
 La première chose à faire est de vérifier si on a assez d'espace sur son disque. Pour une utilisation normale sur un ordinateur personnel de linux, environs 50 Go sont suffisant.
+
 
 > Il est possible que votre ordinateur ait plusieurs disques, ou ait un disque séparé en plusieurs partitions par son constructeur. Il est toujours possible d'installer linux dans ce cas là, mais des manipulations supplémentaires sont souvent nécessaires.
 
@@ -49,7 +55,7 @@ Une fois la partition réduite, vous devrize avoir de l'espace libre, sur lequel
 
 ### 3 - Création du medium d'installation
 
-Munissez vous de votre clé USB, et téléchargez le [fichier iso](https://fr.wikipedia.org/wiki/Image_disque) de Fedora, disponible sur [leur site](https://fedoraproject.org/fr/workstation/). 
+Munissez vous de votre clé USB, et téléchargez le [fichier iso](https://fr.wikipedia.org/wiki/Image_disque) de Fedora. Les deux iso sont diponible sur leur site avec la version [workstation ici](https://fedoraproject.org/fr/workstation/) et la version [KDE plasma ici](https://fedoraproject.org/fr/kde/).
 
 Nous allons ensuite installer **Ventoy** sur la clé. Ventoy est un outil permettant de faciliter le démarrage de fichiers iso contenant un système d'exploitation sur une clé USB. Téléchargez ventoy depuis [leur site](https://www.ventoy.net/en/download.html), et lancez **Ventoy2Disk**. Séléctionnez votre clé USB (vérifier bien que c'est votre clé et pas un disque de votre dordinateur) et cliquez sur **install**.
 
@@ -85,31 +91,58 @@ Une fois cela fait, vous pouvez sauvegarder et quitter le BIOS.
 
 Il est possible qu'un message d'affiche pour vous prévenir que la clé n'est pas vérifiée. Continuez, et attendez que l'ordinateur démarre sur la clé. L'ISO de Fedora sur la clé sera utilisé comme système d'exploitation pour l'ordinateur. La clé contient un Fedora totalement fonctionnel, avec une application permettant l'installation sur le vrai disque dur de l'ordinateur.
 
-Lors du démarrage sur la clé, vous verrez tout d'abord un écran de séléction de Ventoy où vous pourrez choisir de démarrer sur Fedora. Vous verrez ensuite un deuxième écran de séléction, où il faut choisir la première entrée (pas l'entrée séléctionnée par defaut)
+Lors du démarrage sur la clé, vous verrez tout d'abord un écran de sélection de Ventoy où vous pourrez choisir de démarrer sur Fedora. Vous verrez ensuite un deuxième écran de sélection, où il faut choisir la première entrée (pas l'entrée sélectionnée par défaut)
 
 ![fedora grub iso](./content/fedora_ios_grub.png)
 
-### 5 - Installation
+### 5 - Installation sous workstation
 
-Après avoir démaré la clé, vous devriez voir un bureau linux avec un logiciel d'installation. Cliquez sur **Install Fedora**, puis séléctionnez votre langue.
+Après avoir démarré la clé, vous devriez voir un bureau linux avec un logiciel d'installation. Cliquez sur **Install Fedora**, puis sélectionnez votre langue ainsi que le format de votre clavier.
 
-Cliquez alors sur **Installation Destination**. Vous verrez alors un écran vous montrant vos disques. Dans *configuration du stockage*, cliquez sur **personnalisé** puis validez avec le bouton **fait**
+Vous avez le choix de configurer les partitions où utiliser les paramètres par défaut. Référez vous à la section 5.a pour la configuration des partitions.
 
-![install screen 1](./content/install_partitions_1.jpg)
+Sinon, choisissez si vous voulez garder Windows avec `Partager le disque avec un autre système d'exploitation`. Dans le cas où vous voudriez n'utiliser que Fedora cliquer sur `Utiliser le disque tout entier`.
 
-Vous allez maintenant devoir créer deux partitions pour Fedora. La première est nécessaire pour déparer tout ce qui est lié au démarrage du reste du système, et la deuxième contiendra le système. Cliquez sur le **+** en bas, et rentrez `/boot/efi` dans le champ *Point de montage* et `1G` dans le champ *Capacité souhaitée*. Cela permet de créer une partition de 1 Go, qui sera montée dans le système de fichier de linux au chemin `/boot/efi`.
+> ⚠️ Utiliser le disque tout entier supprimera Windows définitivement et tout autres fichiers de votre ordinateur. Assurez-vous d'avoir sauvegarder vos fichiers et de vouloir supprimer Windows.
 
-> ⚠️ Le clavier sera en **qwerty** sur le système présent sur la clé USB. Le `/` correspond à la touche `!` d'un azerty, et le `!` correspond au `1` en azerty.
+![install screen 1](./content/fedora_disk_space.png)
 
-![create boot partition](./content/create_boot_partition.png)
+Vous avez l'option de chiffrer vos données. Pour cela, cocher la case `Chiffrer vos données`. N'oubliez pas de changer la disposition du clavier pour le mot de passe.
 
-Il faut ensuite créer la partition racine du système, qui occupera tout le reste de l'espace. Cliquez à nouveau sur le **+**, et rentrez `/` dans *Point de montage* et `!` dans *Capacité souhaitée*. Le `!` permet d'allouer tout l'espace restant. 
+> ⚠️ Le clavier sera en **qwerty** sur le système présent sur la clé USB. Aller sur l'application Settings > Keyboard > Add input source > French (France) > French (AZERTY). Enfin sélectionnez dans la bar en haut de votre écran en et choisissez fr.
 
-![create root partition](./content/create_root_partition.png)
+> ⚠️⚠️⚠️ Notez bien la phrase secrète. Sans elle, vous perdez vos données à jamais. ⚠️⚠️⚠️
 
-Une fois que tout est fait, cliquez sur **fait**, et cliquez sur **Commencer l'installation**.
+![install screen 2](./content/fedora_encrypting.png)
 
-Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC, et débrancher la clé. Vous devriez alors voir un écran de séléction vous demandant de choisir entre Windows et Fedora.
+Vous pouvez maintenant cliquer sur Installer. L'installation se fait automatiquement.
+
+![install screen 3](./content/fedora_install.png)
+
+Lorsque l'installation sera terminée, vous pourrez redémarrer votre PC et débrancher la clé. Vous devriez alors voir un écran de sélection vous demandant de choisir entre Windows et Fedora.
+
+#### 5.a - Configuration des partitions manuelle
+
+Dans "Méthode d'installation" cliquez sur le menu déroulant en haut à droite :
+
+![partition screen 1](./content/fedora_partition_edit.png)
+
+Et allez dans "Lancer l'éditeur de stockage".
+
+> Si votre disque est vide, il va falloir créer une table des partitions (format GPT) associée au disque vide.
+
+Fedora recommande les partitions suivante :
+
+| Rôle                | point de montage | taille                   | format          |
+|---------------------|------------------|--------------------------|-----------------|
+| Partition EFI       | /boot/efi        | 256 Mo                   | FAT 32          |
+| Partition de Boot   | /boot            | 2 Go                     | EXT4            |
+| Sous partition root | /                | le reste de votre disque | BTRFS subvolume |
+| Sous partition home | /home            | -                        | BTRFS subvolume |
+
+Les points de montage `/` et `/home` font partie du sous volume BTRFS qui partage leur espaces. Vous pouvez aussi les mettre tous les deux en EXT4, cela demande cependant de leur donner une taille à chacun d'entre eux.
+
+Vous avez aussi l'option de créer une partition de swap. Cela est utile si vous voulez faire hiberner votre ordinateur ou si vous avez moins de 4 Go de RAM. La partition SWAP fait en général la même taille que la RAM.
 
 ### 6 - Post Installation
 
